@@ -1,4 +1,4 @@
-# ---------------------- Naive String Matching ---------------------- #
+
 def naive_search(text, pattern):
     n = len(text)
     m = len(pattern)
@@ -21,7 +21,7 @@ def naive_search(text, pattern):
     return matches, comparisons
 
 
-# ---------------------- Compute LPS Array ---------------------- #
+
 def compute_lps(pattern):
     m = len(pattern)
     lps = [0] * m
@@ -43,7 +43,7 @@ def compute_lps(pattern):
     return lps
 
 
-# ---------------------- KMP Algorithm ---------------------- #
+
 def kmp_search(text, pattern):
     n = len(text)
     m = len(pattern)
@@ -75,7 +75,6 @@ def kmp_search(text, pattern):
     return matches, comparisons
 
 
-# ---------------------- Rabin-Karp Algorithm ---------------------- #
 def rabin_karp(text, pattern, q=101):
     n = len(text)
     m = len(pattern)
@@ -113,9 +112,7 @@ def rabin_karp(text, pattern, q=101):
     return matches, comparisons
 
 
-# ========================= MAIN PROGRAM ========================= #
 
-# Changed to a unique text and pattern
 text = "DATASTRUCTURESANDALGORITHMSAREIMPORTANT"
 pattern = "DATA"
 
@@ -144,9 +141,6 @@ print("\nRabin-Karp Algorithm")
 print("Matches      :", r_match)
 print("Comparisons  :", r_comp)
 
-# ========================= PERFORMANCE TEST ========================= #
-
-# Unique fixed text
 text_large = (
     "DATASTRUCTURESANDALGORITHMS"
     "COMPUTERSCIENCEPROGRAMMING"
